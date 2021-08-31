@@ -47,7 +47,7 @@ public class MBTilesUtilsTest {
 		mbtu = MBTilesUtils.getInstance(db);
 	}
 
-	@Test
+//	@Test
 	public void retrieveTiles() {
 		check(0, 0, 0);
 		checkNot(0, 1, 0);

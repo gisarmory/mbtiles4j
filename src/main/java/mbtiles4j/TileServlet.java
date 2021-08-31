@@ -32,12 +32,15 @@ public class TileServlet extends HttpServlet {
 			return;
 		}
 
-		if (!split[3].toLowerCase().endsWith(".png")) {
-			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-			return;
-		}
+//		if (!split[3].toLowerCase().endsWith(".png")) {
+//			response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+//			return;
+//		}
 
-		split[3] = split[3].replace(".png", "");
+//		split[3] = split[3].replace(".png", "");
+		
+
+		split[3] = split[3].replace(".pbf", "");
 
 		MBTilesUtils mbtu = MBTilesUtils.getInstance(split[0]);
 		if (mbtu == null) {
@@ -63,7 +66,8 @@ public class TileServlet extends HttpServlet {
 			return;
 		}
 
-		response.setContentType("image/png");
+		response.setContentType("application/x-protobuf");
+		response.setHeader("Content-Encoding", "gzip");
 		response.setContentLength(tile.length);
 
 		ServletOutputStream oStream = response.getOutputStream();
