@@ -20,11 +20,11 @@ db2.path = D:/files/map2.mbtiles
 db3.path = D:/files/map3.mbtiles
 ```
 
-**别名配置：**tile-dbs = <数据别名>,<数据别名>
+**别名配置：** tile-dbs = <数据别名>,<数据别名>
 
 `tile-dbs` 配置数据别名，这个别名用于数据的识别，包括配置  `.mbtiles` 文件的路径，和文件发布后浏览器的访问路径。别名支持配置多个，中间用英文逗号分隔。
 
-**文件配置格式：**<数据别名>.path=mbtiles 文件绝对路径
+**文件配置格式：** <数据别名>.path=mbtiles 文件绝对路径
 
 例如：`db1.path` 中的 `db1` 是 `tile-dbs` 中配置的别名，`D:/files/map1.mbtiles` 是文件的绝对路径。
 
